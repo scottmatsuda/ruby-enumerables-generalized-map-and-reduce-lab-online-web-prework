@@ -11,17 +11,17 @@ x * -1
 end
 end
 
-# def reduce(source_array, starting_value = nil)
-#   startint_index = starting_value ? 0 : 1
-#   starting_value ||= source_array[0]
-#   source_array[startint_index..-1].each do |el| 
-#     # p starting_value || el
-#     starting_value = yield(starting_value, el)
+def reduce(source_array, starting_value = nil)
+  startint_index = starting_value ? 0 : 1
+  starting_value ||= source_array[0]
+  source_array[startint_index..-1].each do |el| 
+    # p starting_value || el
+    starting_value = yield(starting_value, el)
     
-#   end
-#   starting_value
+  end
+  starting_value
   
-# end
+end
 
 
 
